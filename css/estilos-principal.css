@@ -8,13 +8,14 @@ body{
     font-family: 'open sans';
 }
 
+/*Contenedor principal*/
 .contenedor{
     padding: 60px 0;
     width: 90%;
     max-width: 100%;
     margin: auto;
     overflow: hidden;
-}/*Contenedor principal*/
+}
 
 .titulo{
     color:  #0b56a4;
@@ -28,8 +29,8 @@ header{
     width: 100%;
     height: 600px;
     background: #50C9C3;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, hsl(177, 52%, 73%, 0.6), hsl(177, 53%, 55%, 0.6)), url(../img/1-portada.jpg);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsl(177, 52%, 73%, 0.6), hsl(177, 53%, 55%, 0.6)), url(../img/1-portada.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, hsl(177, 52%, 73%, 0.6), hsl(177, 53%, 55%, 0.6)), url(../img/2_Portada_Principal.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsl(177, 52%, 73%, 0.6), hsl(177, 53%, 55%, 0.6)), url(../img/2_Portada_Principal.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     /*background: #005AA7;  /* fallback for old browsers */
     /*background: -webkit-linear-gradient(to right, hsla(56, 100%, 95%, 0.7), hsla(208, 100%, 33%, 0.7)), url(../img/1-portada.jpg);  /* Chrome 10-25, Safari 5.1-6 */
     /*background: linear-gradient(to right, hsla(56, 100%, 95%, 0.7), hsla(208, 100%, 33%, 0.7)), url(../img/1-portada.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -86,7 +87,7 @@ nav > a:hover{
 }
 
 
-/* About us */
+/* proposito de la pagina */
 main .sobre-pagina{
     padding: 60px 0 40px 0;
 }
@@ -181,6 +182,7 @@ main .sobre-pagina{
 
 .hover-galeria p{
     color: #ffffff;
+    text-align: center;
 }
 
 .image-port:hover .hover-galeria{
@@ -188,9 +190,9 @@ main .sobre-pagina{
 }
 
 
-/*Nuestros usuarios*/
-.cards .titulo{
-    padding: 60px 0 40px 0;
+/*Informacion importante*/
+.informacion-relevante{
+    padding: 60px 0 100px 0;
 }
 
 .cards{
@@ -221,6 +223,15 @@ main .sobre-pagina{
 .cards .card > .contenido-texto-card{
     width: 60%;
     color: #fff;
+}
+
+.cards .card .contenido-texto-card > a{
+    width: 100px;
+    height: 100px;
+    color:#AED6F1 ;
+    font-weight: 300;
+    text-decoration: none;
+    text-align: justify;
 }
 
 .cards .card > .contenido-texto-card p{
