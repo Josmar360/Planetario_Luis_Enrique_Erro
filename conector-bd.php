@@ -1,3 +1,7 @@
 <?php
-$conex = mysqli_connect("localhost", "root", "", "Servicio_social");
+    $server = 'localhost';
+    $user = 'root';
+    $pass = 'Sarinha_3';
+    $db = 'Servicio_social';
+    $conexion = mysqli_connect($server, $user, $pass, $db);
 ?>

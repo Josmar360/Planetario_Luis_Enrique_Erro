@@ -1,28 +1,37 @@
 <?php
-$inc = include("conector_db.php");
-if($inc)
-{
-    $consulta = "SELECT * FROM alumnos";
-    $resultado = mysqli_query($conex, $consulta);
-    if ($resultado) {
-        while($row = $resultado->fetch_array())
-        $id = $row['ID_alumno'];
-        $nombre = $row['nombre_alumno'];
-        $horas_acumuladas = $row['horas_acumuladas'];
-        $horas_faltantes = $row['horas_faltantes'];
-        ?>
-<div>
-    <h2><?php echo $nombre; ?></h2>
-    <div>
-        <p>
-            <b>ID: </b> <?php echo $id; ?><br>
-            <b>Nombre: </b> <?php echo $nombre; ?><br>
-            <b>Horas acumuladas: </b> <?php echo $horas_acumuladas; ?><br>
-            <b>Horas faltantes: </b> <?php echo $horas_faltantes; ?><br>
-        </p>
-    </div>
-</div>
-<?php   
-    }
-}
+include 'conector-bd.php';//incluye el archivo de conexion
+   //Verifica la conexion
+   // Consulta SQL para obtener los datos de la base de datos
+   $identificador = $_GET["identificador"];
+   if($conexion){
+       $sql = "SELECT ID_alumno, nombre_alumno, horas_acumuladas, horas_faltantes FROM alumnos WHERE ID_alumno";
+       $result = $conexion->query($sql);
+       $num_rows = mysqli_num_rows($result);
+   }else {
+       echo 'No se pudo conectar a la base de datos'; 
+   }
+
+   if ($num_rows > 0) {
+       // Imprimir la tabla si hay resultados
+       echo "<table>";
+       echo "<tr>
+            <th>Identificador</th>
+            <th>Nombre</th>
+            <th>Horas acumuladas</th>
+            <th>Horas faltantes</th>
+            </tr>";
+       while ($row = $result->fetch_assoc()) {
+           echo "<tr>";
+           echo "<td>".$row["ID_alumno"]."</td>";
+           echo "<td>".$row["nombre_alumno"]."</td>";
+           echo "<td>".$row["horas_acumuladas"]."</td>";
+           echo "<td>".$row["horas_faltantes"]."</td>";
+           echo "</tr>";
+       }
+       echo "</table>";
+   }else {
+       echo "No se encontraron datos.";
+   }
+   // Cerrar la conexión a la base de datos
+   exit;
 ?>

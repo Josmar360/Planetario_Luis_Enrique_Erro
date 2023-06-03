@@ -1,8 +1,3 @@
-<?php
-//Solicitar el archivo de conexion a la base de datos
-include 'includes/conector-bd.php';
-?>
-
 <!DOCTYPE html>
 <html lang="es">
   <!--Seccion de titulo-->
@@ -12,7 +7,11 @@ include 'includes/conector-bd.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Horas servicio social Planetario Luis Enrique Erro</title>
-    <link rel="shortcut icon" href="img/1-PLEE.jpg" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="img/1_Logotipo_PLEE.jpg"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="css/estilos-horas.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,22 +37,22 @@ include 'includes/conector-bd.php';
       <section class="visualizar horas">
         <div class="contenedor-revisar-horas">
           <div class="contenido-textos">
-            <form class="form-area">
+            <form action="conector.php" method="get" class="form-area">
               <div class="opcion">
                 <div class="titulo-form">
-                  <label for="horas">Número de identificación: </label>
+                  <label for="horas">Número de identificación:</label>
                 </div>
                 <input
                   type="text"
                   placeholder="Ejemplo: 2023FS18"
                   maxlength="8"
-                  name="horas"
+                  name="identificador"
                   id="horas"
                   required
                 />
               </div>
               <div class="boton">
-                <input type="submit" value="Visualizar" />
+                <input type="submit" name="View" value="Buscar" />
               </div>
             </form>
           </div>
@@ -73,8 +72,6 @@ include 'includes/conector-bd.php';
         </svg>
       </div>
     </header>
-
-    <main></main>
 
     <!--Sección de contacto personal-->
     <footer>
