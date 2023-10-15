@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+  <!--Seccion de titulo-->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horas servicio social Planetario Luis Enrique Erro</title>
+    <link
+      rel="shortcut icon"
+      href="img/1_Logotipo_PLEE.jpg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/estilos-horas.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <!--Seccion de botones-->
+      <nav>
+        <a href="index.html">Inicio</a>
+      </nav>
+
+      <!--Titulo princiapal-->
+      <section class="textos-header-horas">
+        <h1>Horas de servicio social</h1>
+      </section>
+
+      <!--Solicitar horas-->
+      <section class="visualizar horas">
+        <div class="contenedor-revisar-horas">
+          <div class="contenido-textos">
+            <form action="conector.php" method="get" class="form-area">
+              <div class="opcion">
+                <div class="titulo-form">
+                  <label for="horas">Número de identificación:</label>
+                </div>
+                <input
+                  type="text"
+                  placeholder="Ejemplo: 2023FS18"
+                  maxlength="8"
+                  name="identificador"
+                  id="horas"
+                  required
+                />
+              </div>
+              <div class="boton">
+                <input type="submit" name="View" value="Buscar" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!--Ola final-->
+      <div class="wave" style="height: 150px; overflow: hidden">
+        <svg
+          viewBox="0 0 500 130"
+          preserveAspectRatio="none"
+          style="height: 100%; width: 100%"
+        >
+          <path
+            d="M-0.00,49.85 C188.71,-6.40 371.55,173.71 500.00,49.85 L500.00,149.60 L-0.00,149.60 Z"
+            style="stroke: none; fill: #1a3539"
+          ></path>
+        </svg>
+      </div>
+    </header>
+
+    <!--Sección de contacto personal-->
+    <footer>
+      <div class="contenedor-footer" id="Contacto-personal">
+        <div class="content-foo">
+          <h4>Número de teléfono</h4>
+          <p>55-7637-3732</p>
+        </div>
+        <div class="content-foo">
+          <h4>Correo electrónico</h4>
+          <p>josmargustavopalominocastelan@gmail.com</p>
+        </div>
+      </div>
+      <h2 class="titulo-final">&copy; 2023 Josmar Gustavo Palomino Castelan</h2>
+    </footer>
+  </body>
+</html>
